@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# ChromaDB（執行期產生，每個 user 不同）
+.chroma/
+
+# IDE
+.idea/
+.vscode/
+
+# pytest
+.pytest_cache/
+
+# Private notes
+*.private.md
+
+# Environment
+.env
+
+# Experiment logs
+experiments/
+
+# OS
+.DS_Store
+uv.lock
