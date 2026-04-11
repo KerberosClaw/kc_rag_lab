@@ -1,6 +1,12 @@
 """RAG pipeline 設定與資料結構。"""
 
+import os
 from dataclasses import dataclass, field
+
+from dotenv import load_dotenv
+
+# 從 .env 讀設定（不存在也沒關係，會 fallback 到系統環境變數）
+load_dotenv()
 
 
 # --- Chunk 參數 ---
@@ -12,8 +18,6 @@ HEADING_PATTERN = r"^(#{1,3})\s+"  # 切割用的 heading 層級（h1-h3）
 # --- LLM Server 設定 ---
 # 支援任何 OpenAI 相容 API（oMLX、Ollama、OpenAI 等）
 # 設定方式見 .env.example
-
-import os
 
 LLM_BASE_URL = os.environ.get("RAG_LLM_URL", "http://127.0.0.1:8000/v1")
 LLM_API_KEY = os.environ.get("RAG_LLM_KEY", "")

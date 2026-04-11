@@ -9,6 +9,7 @@ dependencies = [
     "chromadb>=1.0",
     "gradio>=5.0",
     "httpx>=0.27",
+    "python-dotenv>=1.0",
     "rich>=13.0",
 ]
 
